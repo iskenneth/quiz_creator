@@ -18,3 +18,4 @@ def convert_to_txt (question, choice_a, choice_b,choice_c, choice_d, correct_ans
 class QuizCreator(BoxLayout):
     def __init__(self, **kwargs):
         super().__init__(orientation='vertical', **kwargs)  #arranging buttongs vertically
+        self.question_input = TextInput(hint_text="Enter your question", multiline=False)

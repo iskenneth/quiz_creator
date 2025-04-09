@@ -14,6 +14,7 @@ while True:
     choice_d = input("Enter answer for choice d: ")
     correct_answer = input("What is the letter of the correct answer?: ") #Ask the user to confirm the correct answer
     #Save the question+correct asnwer to .txt file 
+def convert_to_.txt (question, choice_a, choice_b,choice_c, choice_d, correct_answer): 
     with open('quiz_data.txt' , 'a') as file:
         file.write(f" Question: {question} \n")
         file.write(f" a.): {choice_a} \n")

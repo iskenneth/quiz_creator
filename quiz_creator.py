@@ -6,7 +6,7 @@ from kivy.uix.button import Button
 from kivy.uix.spinner import Spinner
 
     #Save the question+correct asnwer to .txt file 
-def convert_to_.txt (question, choice_a, choice_b,choice_c, choice_d, correct_answer): 
+def convert_to_txt (question, choice_a, choice_b,choice_c, choice_d, correct_answer): 
     with open('quiz_data.txt' , 'a') as file:
         file.write(f" Question: {question} \n")
         file.write(f" a.): {choice_a} \n")
@@ -16,3 +16,5 @@ def convert_to_.txt (question, choice_a, choice_b,choice_c, choice_d, correct_an
         file.write(f" Correct Answer: {correct_answer} \n")
 
 class QuizCreator(BoxLayout):
+    def __init__(self, **kwargs):
+        super().__init__(orientation='vertical', **kwargs)  #arranging buttongs vertically

@@ -8,5 +8,9 @@ correct_answer = input("What is the letter of the correct answer?: ") #Ask the u
 #Save the question+correct asnwer to .txt file 
 with open('quiz_data.txt' , 'a') as file:
     file.write(f" Question: {question} \n")
+    file.write(f" a.): {choice_a} \n")
+    file.write(f" b.): {choice_b} \n")
+    file.write(f" c.): {choice_c} \n")
+    file.write(f" d.): {choice_d} \n")
 #Ask user if they want to input another question
 #If yes loop the program, if no break

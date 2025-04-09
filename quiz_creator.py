@@ -14,4 +14,7 @@ with open('quiz_data.txt' , 'a') as file:
     file.write(f" d.): {choice_d} \n")
     file.write(f" Correct Answer: {correct_answer} \n")
 #Ask user if they want to input another question
-#If yes loop the program, if no break
+proceed = input("Do you want to add another question (y/n)")
+if proceed != y:
+    print(Exiting the program....)
+    break #If yes loop the program, if no break

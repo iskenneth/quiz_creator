@@ -33,10 +33,29 @@ class QuizCreator(BoxLayout):
 
         self.choice_d_input = TextInput(hint_text="Enter answer for choice D", multiline=False)
         self.add_widget(self.choice_d_input)
-
-
         
-        
+class QuizCreator(BoxLayout):
+    def __init__(self, **kwargs):
+        super().__init__(orientation='vertical', **kwargs)
 
+        # Input fields for the question and choices
+        self.question_input = TextInput(hint_text="Enter your question", multiline=False)
+        self.add_widget(self.question_input)
 
+        self.choice_a_input = TextInput(hint_text="Enter answer for choice A", multiline=False)
+        self.add_widget(self.choice_a_input)
+
+        self.choice_b_input = TextInput(hint_text="Enter answer for choice B", multiline=False)
+        self.add_widget(self.choice_b_input)
+
+        self.choice_c_input = TextInput(hint_text="Enter answer for choice C", multiline=False)
+        self.add_widget(self.choice_c_input)
+
+        self.choice_d_input = TextInput(hint_text="Enter answer for choice D", multiline=False)
+        self.add_widget(self.choice_d_input)
         
+        self.answer_spinner = Spinner(
+            text = "Select correct answer",
+            values = ('a', 'b', 'c', 'd')
+        )
+        self.add_widget(self.answer_spinner)

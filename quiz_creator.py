@@ -12,5 +12,6 @@ with open('quiz_data.txt' , 'a') as file:
     file.write(f" b.): {choice_b} \n")
     file.write(f" c.): {choice_c} \n")
     file.write(f" d.): {choice_d} \n")
+    file.write(f" Correct Answer: {correct_answer} \n")
 #Ask user if they want to input another question
 #If yes loop the program, if no break

@@ -48,5 +48,10 @@ class QuizCreator(BoxLayout):
         self.add_widget(self.feedback)
         
     def save_question(self, instance):
-        
+        question = self.question_input.text
+        choice_a = self.choice_a_input.text
+        choice_b = self.choice_b_input.text
+        choice_c = self.choice_c_input.text
+        choice_d = self.choice_d_input.text
+        correct_answer = self.correct_answer_input.text
     

@@ -53,7 +53,7 @@ class QuizCreator(BoxLayout):
         choice_b = self.choice_b_input.text
         choice_c = self.choice_c_input.text
         choice_d = self.choice_d_input.text
-        correct_answer = self.correct_answer_input.text
+        correct_answer = self.correct_answer_spinner.text
         
         if correct_answer not in ('a', 'b', 'c', 'd'):
             self.feedback.text = "[ERROR 404!!] Select a valid correct answer."

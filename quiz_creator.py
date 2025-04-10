@@ -42,7 +42,7 @@ class QuizCreator(BoxLayout):
         
         save_button = Button(text = "Save Question")
         self_button.bind(on_pres=self.save_question)
-        self.add_   widget(save_button)
+        self.add_widget(save_button)
         
         self.feedback = Label(text = "")
         self.add_widget(self.feedback)
@@ -56,9 +56,19 @@ class QuizCreator(BoxLayout):
         correct_answer = self.correct_answer_input.text
         
         if correct_answer not in ('a', 'b', 'c', 'd'):
-        self.feedback.text = "[ERROR 404!!] Select a valid correct answer."
-        return
+            self.feedback.text = "[ERROR 404!!] Select a valid correct answer."
+            return
         
         convert_to_txt(question, choice_a, choice_b, choice_c, choice_d, correct_answer)
-    self.feedback.text = "[SAVED] Question added successfully!"
-    
+        self.feedback.text = "[SAVED] Question added successfully!"
+        
+        self.question_input.text = ""
+        self.choice_a_input.text = ""
+        self.choice_b_input.text = ""
+        self.choice_c_input.text = ""
+        self.choice_d_input.text = ""
+        self.correct_answer_spinner.text = ""
+        
+      
+             
+        

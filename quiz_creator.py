@@ -58,4 +58,7 @@ class QuizCreator(BoxLayout):
         if correct_answer not in ('a', 'b', 'c', 'd'):
         self.feedback.text = "[ERROR 404!!] Select a valid correct answer."
         return
+        
+        convert_to_txt(question, choice_a, choice_b, choice_c, choice_d, correct_answer)
+    self.feedback.text = "[SAVED] Question added successfully!"
     

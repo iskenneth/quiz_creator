@@ -34,7 +34,7 @@ class QuizCreator(BoxLayout):
         self.choice_d_input = TextInput(hint_text="Enter answer for choice D", multiline=False)
         self.add_widget(self.choice_d_input)
     
-        self.answer_spinner = Spinner(
+        self.correct_answer_spinner = Spinner(
             text = "Select correct answer",
             values = ('a', 'b', 'c', 'd')
         )
@@ -67,7 +67,7 @@ class QuizCreator(BoxLayout):
         self.choice_b_input.text = ""
         self.choice_c_input.text = ""
         self.choice_d_input.text = ""
-        self.correct_answer_spinner.text = ""
+        self.correct_answer_spinner.text = "Select a Correct answer"
         
 class QuizApp(App):
     def build(self):

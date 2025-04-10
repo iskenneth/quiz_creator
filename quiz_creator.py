@@ -41,7 +41,7 @@ class QuizCreator(BoxLayout):
         self.add_widget(self.answer_spinner)
         
         save_button = Button(text = "Save Question")
-        self_button.bind(on_pres=self.save_question)
+        save_button.bind(on_pres=self.save_question)
         self.add_widget(save_button)
         
         self.feedback = Label(text = "")

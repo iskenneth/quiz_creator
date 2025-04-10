@@ -69,6 +69,9 @@ class QuizCreator(BoxLayout):
         self.choice_d_input.text = ""
         self.correct_answer_spinner.text = ""
         
+class QuizApp(App):
+    def build(self):
+      return  QuizCreator()
       
              
         

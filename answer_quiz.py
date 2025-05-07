@@ -19,6 +19,9 @@ class Question:
                choice_c = lines[option + 1].strip().split(":")[1].strip()
                choice_d = lines[option + 1].strip().split(":")[1].strip()
                correct_answer = lines[option + 5].strip().split(":")[1].strip()
+               
+               choices = [choice_a, choice_b, choice_c, choice_d]
+               
 
                
         

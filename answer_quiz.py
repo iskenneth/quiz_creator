@@ -12,4 +12,5 @@ class Question:
         question = []
     with open(quiz_data.txt, 'r') as file:
         lines = file.readlines()
+    for options in range (0, len(lines), 6):
         

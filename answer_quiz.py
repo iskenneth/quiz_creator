@@ -4,6 +4,4 @@
 #Show the question and choices to the user
 #Ask the user to enter their answer
 #Compare the user's answer to the correct answer
-# If the answer is correct, say "Correct!" Else, say "Wrong!"
-
-        
+# If the answer is correct, say "Correct!" Else, say "Wrong"  

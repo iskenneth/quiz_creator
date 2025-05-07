@@ -20,10 +20,18 @@ class Question:
                choice_d = lines[option + 1].strip().split(":")[1].strip()
                correct_answer = lines[option + 5].strip().split(":")[1].strip()
                
-               choices = [choice_a, choice_b, choice_c, choice_d]
+               choices =  {
+                   'a' = choices_a,
+                   'b' = choices_b,
+                   'c' = choices_c,
+                   'd' = choices_d
+               }
                tanong = Question(question_text, choices, correct_answer)
                question.append(tanong)
-    return question               
+               
+    return question
+    
+                                  
      
                
 

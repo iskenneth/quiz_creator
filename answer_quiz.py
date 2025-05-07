@@ -21,7 +21,7 @@ class Question:
                correct_answer = lines[option + 5].strip().split(":")[1].strip()
                
                choices = [choice_a, choice_b, choice_c, choice_d]
-               
+               question = Question(question_text, choices, correct_answer)
 
                
         

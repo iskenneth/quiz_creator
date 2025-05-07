@@ -22,6 +22,9 @@ class Question:
                
                choices = [choice_a, choice_b, choice_c, choice_d]
                tanong = Question(question_text, choices, correct_answer)
+               question.append(tanong)
+    return question               
+     
                
 
                

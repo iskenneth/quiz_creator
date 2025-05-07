@@ -13,4 +13,7 @@ class Question:
     with open(quiz_data.txt, 'r') as file:
         lines = file.readlines()
     for options in range (0, len(lines), 6):
+        question_text = lines[options].strip().split(":")[1].strip()
+        
+
         

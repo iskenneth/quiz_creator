@@ -14,6 +14,6 @@ class Question:
         lines = file.readlines()
     for options in range (0, len(lines), 6):
         question_text = lines[options].strip().split(":")[1].strip()
-        
+        choice_a = lines[option + 1].strip().split(":")[1].strip()
 
         

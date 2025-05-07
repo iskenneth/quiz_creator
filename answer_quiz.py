@@ -1,4 +1,4 @@
-#Create a new question 
+
 class Question:
     def __init__(self, text_question, choices, correct_answer):
         self.text_question = text_question
@@ -18,6 +18,8 @@ class Question:
                choice_b = lines[option + 1].strip().split(":")[1].strip()
                choice_c = lines[option + 1].strip().split(":")[1].strip()
                choice_d = lines[option + 1].strip().split(":")[1].strip()
+               correct_answer = lines[option + 5].strip().split(":")[1].strip()
+
                
         
 

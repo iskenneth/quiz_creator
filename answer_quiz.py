@@ -8,6 +8,9 @@ class Question:
     def is_correct (self, answer):
         return self.correct_answer == answer
         
+    def load_question_from_file(quiz_data.txt):
+        
+        
 #When creating: a. Ask for the question text  b. Ask for 4 choices (A, B, C, D) c. Ask which letter is the correct answer
 # Store the question text, choices, and correct answer
 #Show the question and choices to the user

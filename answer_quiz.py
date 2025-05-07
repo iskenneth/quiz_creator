@@ -1,3 +1,4 @@
+import random
 
 class Question:
     def __init__(self, text_question, choices, correct_answer):

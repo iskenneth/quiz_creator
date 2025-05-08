@@ -44,6 +44,10 @@ class Question:
             label_map = {}
             display_labels = ['a', 'b', 'c','d']
             
+            for i, (original_label, choice_text) in enumerate(choice_list):
+                label_map[display_labels [i]] = original_label
+                print(f"{display_labels[i]}.) {choice_text}")
+            
     
     
     

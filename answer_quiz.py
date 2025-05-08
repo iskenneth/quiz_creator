@@ -33,6 +33,7 @@ class Question:
     return question
     
     def take_quiz(question):
+        score = 0
     
     
     

@@ -32,6 +32,9 @@ class Question:
     random.shuffle(question)         
     return question
     
+    def take_quiz(question):
+    
+    
     
  
     

@@ -38,6 +38,8 @@ class Question:
         for tanong in question:
             print("\n" + tanong.text)
             
+            choice_list = list(tanong.choice.items())
+            random.shuffle(choice_list)
     
     
     

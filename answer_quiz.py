@@ -40,6 +40,10 @@ class Question:
             
             choice_list = list(tanong.choice.items())
             random.shuffle(choice_list)
+            
+            label_map = {}
+            display_labels = ['a', 'b', 'c','d']
+            
     
     
     

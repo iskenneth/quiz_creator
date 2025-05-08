@@ -34,6 +34,10 @@ class Question:
     
     def take_quiz(question):
         score = 0
+        
+        for tanong in question:
+            print("\n" + tanong.text)
+            
     
     
     

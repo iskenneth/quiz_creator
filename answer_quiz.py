@@ -68,5 +68,7 @@ class QuizApp(App):
             option_button = Button(text=f"{options[letters]}. {choice_text}",on_press=lambda instances, label=options[letters]: self.check_answer(label))
             self.add_widget(option_button)
             
+    def check_answer(self, selected_label):            
+            
             
      

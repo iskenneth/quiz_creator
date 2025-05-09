@@ -87,6 +87,7 @@ class QuizApp(App):
             self.show_score()            
    
      def show_score(self):
-                
+         score_message = f"Your final score is: {self.score}/{len(self.questions)}"    
+         self.show_popup("Done....", score_message)
          
         

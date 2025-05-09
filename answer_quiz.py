@@ -1,10 +1,10 @@
 import random
-import kivy.app import App
-import kivy.uix.label import Label
-import kivy.uix.button import Button
-import kivy.uix.popup import Popup
-import kivy.uix.boxlayout import Boxlayout
-import kivy.uix.gridlayput import Gridlayout
+from kivy.app import App
+from kivy.uix.label import Label
+from kivy.uix.button import Button
+from kivy.uix.popup import Popup
+from kivy.uix.boxlayout import Boxlayout
+from kivy.uix.gridlayput import Gridlayout
 
 class Question:
     def __init__(self, text_question, choices, correct_answer):

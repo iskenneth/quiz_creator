@@ -3,8 +3,8 @@ from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.popup import Popup
-from kivy.uix.boxlayout import Boxlayout
-from kivy.uix.gridlayput import Gridlayout
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayput import GridLayout
 
 class Question:
     def __init__(self, text_question, choices, correct_answer):
@@ -88,11 +88,11 @@ class QuizApp(App):
         else:
             self.show_score()            
    
-     def show_score(self):
+    def show_score(self):
          score_message = f"Your final score is: {self.score}/{len(self.questions)}"    
          self.show_popup("Done....", score_message)
          
     def show_popup(self, title, message):
         popup = Popup(title=title, content=Label(text=message), size_hint=(None, None), size=(400, 400)) 
-         popup.open()         
+        popup.open()         
         

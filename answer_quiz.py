@@ -49,10 +49,11 @@ class QuizApp(App):
         self.layout.add_widget(self.question_label)
         
         self.buttons_layout = GridLayout(cols=1)
-        self.add_widget(self.buttons_layout)
+        self.layout.add_widget(self.buttons_layout)
         
         self.button_next = Button(text="Proceed_to_next_Question", on_press=self.next_question)
-        self.add_widget(self.button_next)
+        self.layout.add_widget(self.button_next)
+       
         self.project_question()
         return self.layout
         

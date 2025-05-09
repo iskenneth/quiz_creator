@@ -81,7 +81,7 @@ class QuizApp(App):
                 self.score +=1
                 self.show_popup("Correct!!", "on to the next one")
          else:
-                self.show_popup(f"Wrong!!",  "correct answer is {tanong.correct_answer}")  
+                self.show_popup("Wrong!!",  f"correct answer is {tanong.correct_answer}")  
                 
     def next_question(self, instance):
         self.question_count += 1

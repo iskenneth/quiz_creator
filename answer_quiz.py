@@ -85,6 +85,8 @@ class QuizApp(App):
             self.project_question()
         else:
             self.show_score()            
-        
+   
+     def show_score(self):
+                
          
         

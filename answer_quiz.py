@@ -57,4 +57,6 @@ class QuizApp(App):
             
             self.buttons_layout.clear_widgets()
             
+            choice_list = list(tanong.choices.items())
+            random.shuffle(choice_list)
      

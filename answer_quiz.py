@@ -36,15 +36,15 @@ def take_quiz(question):
     score = 0
         
     for tanong in question:
-            print("\n" + tanong.text)
+            print("\n" + tanong.text_question)
             
-            choice_list = list(tanong.choice.items())
+            choice_list = list(tanong.choices.items())
             random.shuffle(choice_list)
             
             label_map = {}
             display_labels = ['a', 'b', 'c','d']
             
-    for i, (original_label, choice_text) in enumerate(choice_list):
+            for i, (original_label, choice_text) in enumerate(choice_list):
             label_map[display_labels [i]] = original_label
             print(f"{display_labels[i]}.) {choice_text}")
                 
@@ -56,14 +56,14 @@ def take_quiz(question):
                     print ("Your answer is correct!!")
                     score +=1
                 else:
-                    print(f"Wrong!!, correct answer is {question.correct_amswer}")      
+                    print(f"Wrong!!, correct answer is {question.correct_answer}")      
             else:
                 print("Error!!")      
                       
     print(f"\n Your final score is: {score}/{len(question)}")        
 
 questions = load_question_from_file("quiz_data.txt")
-take_quiz(question)                            
+take_quiz(questions)                            
                                             
                                             
                                            

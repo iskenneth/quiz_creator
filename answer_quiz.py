@@ -10,23 +10,23 @@ class Question:
         return self.correct_answer == answer
         
 def load_question_from_file(filename):
-        question = []
+    question = []
     with open(quiz_data.txt, 'r') as file:
         lines = file.readlines()
     for options in range (0, len(lines), 6):
         question_text = lines[options].strip().split(":")[1].strip()
         choice_a = lines[options + 1].strip().split(":")[1].strip()
-               choice_b = lines[options + 1].strip().split(":")[1].strip()
-               choice_c = lines[options + 1].strip().split(":")[1].strip()
-               choice_d = lines[options + 1].strip().split(":")[1].strip()
-               correct_answer = lines[options + 5].strip().split(":")[1].strip()
+        choice_b = lines[options + 1].strip().split(":")[1].strip()
+        choice_c = lines[options + 1].strip().split(":")[1].strip()
+        choice_d = lines[options + 1].strip().split(":")[1].strip()
+        correct_answer = lines[options + 5].strip().split(":")[1].strip()
                
-               choices =  {
-                   'a' = choices_a,
-                   'b' = choices_b,
-                   'c' = choices_c,
-                   'd' = choices_d
-               }
+        choices =  {
+            'a' = choices_a,
+            'b' = choices_b,
+            'c' = choices_c,
+            'd' = choices_d
+             }
                tanong = Question(question_text, choices, correct_answer)
                question.append(tanong)              
     random.shuffle(question)         

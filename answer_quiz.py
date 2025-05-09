@@ -79,13 +79,13 @@ class QuizApp(App):
          tanong = self.questions[self.question_count]
          if selected_label == tanong.correct_answer:
                 self.score +=1
-                self.show_popup("Correct!!")
+                self.show_popup("Correct!!", "on to the next one")
          else:
-                self.show_popup(f"Wrong!!, correct answer is {tanong.correct_answer}")  
+                self.show_popup(f"Wrong!!",  "correct answer is {tanong.correct_answer}")  
                 
     def next_question(self, instance):
         self.question_count += 1
-        if self.question_count < len(self.question):
+        if self.question_count < len(self.questions):
             self.project_question()
         else:
             self.show_score()            

@@ -50,6 +50,11 @@ class Question:
                 
             user_input = input("What is your answer (a/b/c/d)").lower()           
             
+            if user_input in label map:
+                selected_label = label_map[user_input]
+                
+                    
+                    
     
     
     

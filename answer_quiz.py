@@ -34,3 +34,5 @@ def load_question_from_file(filename):
     return question
     
 class QuizApp(App):
+    def build(self):
+        self.question_count = 0

@@ -56,11 +56,12 @@ def take_quiz(question):
                     print ("Your answer is correct!!")
                     score +=1
                 else:
-                    print(f"Wrong!!, correct answer is {question.correct_amswer')      
+                    print(f"Wrong!!, correct answer is {question.correct_amswer}")      
             else:
                 print("Error!!")      
                       
-    print(f"\n Your final score is: {score}/{len(question)}")                  
+    print(f"\n Your final score is: {score}/{len(question)}")        
+              
                                             
                                             
                                            

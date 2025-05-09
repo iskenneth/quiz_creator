@@ -51,6 +51,8 @@ class QuizApp(App):
         
         self.button_next = Button(text="Proceed to next Question", on_press=self.proceed_to_next_question)
         self.add_widget(self.buttons_next)
+        self.project_question()
+        return self.layout
         
     def project_question(self):
             tanong = self.questions[self.question_index]  
@@ -75,7 +77,10 @@ class QuizApp(App):
                 self score +=1
                 self.show_popup("Correct!!")
             else:
-                self.show_popup(f"Wrong!!, correct answer is {tanong.correct_answer")                  
+                self.show_popup(f"Wrong!!, correct answer is {tanong.correct_answer")  
+                
+            
+                                
                                   
                                   
                         

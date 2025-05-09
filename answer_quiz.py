@@ -63,5 +63,8 @@ class QuizApp(App):
             label_map = {}
             options = ['a', 'b', 'c', 'd']
             
-            for letters, (original_label, choice_text) in enumerate(choice_list):
+            for letters, (original_label, choice_text) in enumerate(choice_list): 
+            label_map[options [letters]] = original label
+            option_button = Button(text=f"{options[letters]}. {choice_text}"
+            
      

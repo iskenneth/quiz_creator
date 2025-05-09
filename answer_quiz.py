@@ -58,8 +58,9 @@ class Question:
                 else:
                     print(f"Wrong!!, correct answer is {question.correct_amswer')      
             else:
-                print("Error!!")             
-                  
+                print("Error!!")      
+                      
+print(f"\n Your final score is: {score}/{len(question)}")                  
                                             
                                             
                                            

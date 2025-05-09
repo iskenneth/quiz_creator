@@ -58,7 +58,7 @@ class QuizApp(App):
         return self.layout
         
     def project_question(self):
-            tanong = self.questions[self.question_index]  
+            tanong = self.questions[self.question_count]  
             self.question_label.text = tanong.text_question
             
             self.buttons_layout.clear_widgets()
@@ -71,11 +71,12 @@ class QuizApp(App):
             
             for letters, (original_label, choice_text) in enumerate(choice_list): 
                 label_map[options [letters]] = original_label
-                option_button = Button(text=f"{options[letters]}. {choice_text}",on_press=lambda instances, label=options[letters]: self.check_answer(label))
+                option_button = Button(text=f"{options[letters]}. {choice_text}", on_press=lambda instance, label=options[letters]: self.check_answer(label))
+
                 self.buttons_layout.add_widget(option_button)
             
     def check_answer(self, selected_label):
-         tanong = self.question[self.question_index]
+         tanong = self.questions[self.question_count]
          if selected_label == tanong.correct_answer:
                 self.score +=1
                 self.show_popup("Correct!!")
@@ -83,8 +84,8 @@ class QuizApp(App):
                 self.show_popup(f"Wrong!!, correct answer is {tanong.correct_answer}")  
                 
     def next_question(self, instance):
-        self.question.index += 1
-        if self.question_index < len(self.question):
+        self.question_count += 1
+        if self.question_count < len(self.question):
             self.project_question()
         else:
             self.show_score()            

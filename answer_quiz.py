@@ -2,7 +2,9 @@ import random
 import kivy.app import App
 import kivy.uix.label import Label
 import kivy.uix.button import Button
-import kivy.uix popup import Popup
+import kivy.uix.popup import Popup
+import kivy.uix.boxlayout import Boxlayout
+import kivy.uix.gridlayput import Gridlayout
 
 class Question:
     def __init__(self, text_question, choices, correct_answer):
@@ -40,7 +42,7 @@ class QuizApp(App):
     def build(self):
         self.question_count = 0
         self.score = 0
-        self.question = load_question_from_file('quiz_data.txt')
+        self.questions = load_question_from_file('quiz_data.txt')
         
         self.layout = BoxLayout (orientation = 'vertical')
         self.question_label = Label( text = "These are the Questions")
@@ -90,5 +92,7 @@ class QuizApp(App):
          score_message = f"Your final score is: {self.score}/{len(self.questions)}"    
          self.show_popup("Done....", score_message)
          
-    def show_popup(self, title, message):         
+    def show_popup(self, title, message):
+        popup = Popup(title=title, content=Label(text=message), size_hint=(None, None), size=(400, 400)) 
+         popup.open()         
         

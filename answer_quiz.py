@@ -51,8 +51,8 @@ class QuizApp(App):
         self.buttons_layout = GridLayout(column=1)
         self.add_widget(self.buttons_layout)
         
-        self.button_next = Button(text="Proceed to next Question", on_press=self.proceed_to_next_question)
-        self.add_widget(self.buttons_next)
+        self.button_next = Button(text="Proceed_to_next_Question", on_press=self.proceed_to_next_question)
+        self.add_widget(self.button_next)
         self.project_question()
         return self.layout
         
@@ -76,13 +76,13 @@ class QuizApp(App):
     def check_answer(self, selected_label):
          tanong = self.question[self.question_index]
          if selected_label == tanong.correct_answer:
-                self_score +=1
+                self.score +=1
                 self.show_popup("Correct!!")
          else:
                 self.show_popup(f"Wrong!!, correct answer is {tanong.correct_answer}")  
                 
     def next_question(self, instance):
-        self.questin_index += 1
+        self.question.index += 1
         if self.question_index < len(self.question):
             self.project_question()
         else:
@@ -94,5 +94,6 @@ class QuizApp(App):
          
     def show_popup(self, title, message):
         popup = Popup(title=title, content=Label(text=message), size_hint=(None, None), size=(400, 400)) 
-        popup.open()         
+        popup.open()        
+         
         

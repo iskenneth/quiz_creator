@@ -22,13 +22,13 @@ def load_question_from_file(filename):
         correct_answer = lines[options + 5].strip().split(":")[1].strip()
                
         choices =  {
-            'a' = choices_a,
-            'b' = choices_b,
-            'c' = choices_c,
-            'd' = choices_d
-             }
-               tanong = Question(question_text, choices, correct_answer)
-               question.append(tanong)              
+            'a' : choices_a,
+            'b' : choices_b,
+            'c' : choices_c,
+            'd' : choices_d
+        }
+        tanong = Question(question_text, choices, correct_answer)
+        question.append(tanong)              
     random.shuffle(question)         
     return question
     

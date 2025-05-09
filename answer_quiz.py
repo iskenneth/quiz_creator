@@ -15,11 +15,11 @@ class Question:
         lines = file.readlines()
     for options in range (0, len(lines), 6):
         question_text = lines[options].strip().split(":")[1].strip()
-        choice_a = lines[option + 1].strip().split(":")[1].strip()
-               choice_b = lines[option + 1].strip().split(":")[1].strip()
-               choice_c = lines[option + 1].strip().split(":")[1].strip()
-               choice_d = lines[option + 1].strip().split(":")[1].strip()
-               correct_answer = lines[option + 5].strip().split(":")[1].strip()
+        choice_a = lines[options + 1].strip().split(":")[1].strip()
+               choice_b = lines[options + 1].strip().split(":")[1].strip()
+               choice_c = lines[options + 1].strip().split(":")[1].strip()
+               choice_d = lines[options + 1].strip().split(":")[1].strip()
+               correct_answer = lines[options + 5].strip().split(":")[1].strip()
                
                choices =  {
                    'a' = choices_a,

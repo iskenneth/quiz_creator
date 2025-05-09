@@ -56,7 +56,13 @@ class Question:
                     print ("Your answer is correct!!")
                     score +=1
                 else:
-                    print(f"Wrong!!, correct answer is {question.correct_amswer')                 
+                    print(f"Wrong!!, correct answer is {question.correct_amswer')      
+            else:
+                print("Error!!")             
+                  
+                                            
+                                            
+                                           
                     
                     
     

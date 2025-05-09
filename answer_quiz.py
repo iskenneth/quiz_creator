@@ -52,7 +52,11 @@ class Question:
             
             if user_input in label map:
                 selected_label = label_map[user_input]
-                
+                if selected_label == question.correct_anwer:
+                    print ("Your answer is correct!!")
+                    score +=1
+                else:
+                    print(f"Wrong!!, correct answer is {question.correct_amswer')                 
                     
                     
     

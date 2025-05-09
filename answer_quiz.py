@@ -45,18 +45,18 @@ def take_quiz(question):
             display_labels = ['a', 'b', 'c','d']
             
             for i, (original_label, choice_text) in enumerate(choice_list):
-            label_map[display_labels [i]] = original_label
-            print(f"{display_labels[i]}.) {choice_text}")
+                label_map[display_labels [i]] = original_label
+                print(f"{display_labels[i]}.) {choice_text}")
                 
             user_input = input("What is your answer (a/b/c/d)").lower()           
             
             if user_input in label_map:
                 selected_label = label_map[user_input]
-                if selected_label == question.correct_anwer:
+                if selected_label == tanong.correct_answer:
                     print ("Your answer is correct!!")
                     score +=1
                 else:
-                    print(f"Wrong!!, correct answer is {question.correct_answer}")      
+                    print(f"Wrong!!, correct answer is {tanong.correct_answer}")      
             else:
                 print("Error!!")      
                       

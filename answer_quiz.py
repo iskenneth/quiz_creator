@@ -1,5 +1,7 @@
 import random
 import kivy.app import App
+import kivy.uix.label import Label
+import kivy.uix.button import Button
 
 class Question:
     def __init__(self, text_question, choices, correct_answer):
@@ -42,3 +44,10 @@ class QuizApp(App):
         self.layout = BoxLayout (orientation = 'vertical')
         self.question_label = Label( text = "These are the Questions")
         self.layout.add_widget(self.question_label)
+        
+        self.buttons_layout = GridLayout(column=1)
+        self.add_widget(self.buttons_layout)
+        
+        self.button_next = Button(text="Proceed to next Question", on_press=self.proceed_to_next_question)
+        self.add_widget(self.buttons_next)
+     

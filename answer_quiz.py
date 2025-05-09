@@ -59,4 +59,7 @@ class QuizApp(App):
             
             choice_list = list(tanong.choices.items())
             random.shuffle(choice_list)
+            
+            label_map = {}
+            options = ['a', 'b', 'c', 'd']
      

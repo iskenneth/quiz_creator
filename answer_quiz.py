@@ -76,7 +76,7 @@ class QuizApp(App):
     def check_answer(self, selected_label):
          tanong = self.question[self.question_index]
          if selected_label == tanong.correct_answer:
-                self score +=1
+                self_score +=1
                 self.show_popup("Correct!!")
          else:
                 self.show_popup(f"Wrong!!, correct answer is {tanong.correct_answer")  

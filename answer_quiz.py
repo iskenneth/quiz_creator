@@ -9,7 +9,7 @@ class Question:
     def is_correct (self, answer):
         return self.correct_answer == answer
         
-    def load_question_from_file(quiz_data.txt):
+def load_question_from_file(quiz_data.txt):
         question = []
     with open(quiz_data.txt, 'r') as file:
         lines = file.readlines()
@@ -32,10 +32,10 @@ class Question:
     random.shuffle(question)         
     return question
     
-    def take_quiz(question):
-        score = 0
+def take_quiz(question):
+    score = 0
         
-        for tanong in question:
+    for tanong in question:
             print("\n" + tanong.text)
             
             choice_list = list(tanong.choice.items())
@@ -44,9 +44,9 @@ class Question:
             label_map = {}
             display_labels = ['a', 'b', 'c','d']
             
-            for i, (original_label, choice_text) in enumerate(choice_list):
-                label_map[display_labels [i]] = original_label
-                print(f"{display_labels[i]}.) {choice_text}")
+    for i, (original_label, choice_text) in enumerate(choice_list):
+            label_map[display_labels [i]] = original_label
+            print(f"{display_labels[i]}.) {choice_text}")
                 
             user_input = input("What is your answer (a/b/c/d)").lower()           
             
@@ -60,7 +60,7 @@ class Question:
             else:
                 print("Error!!")      
                       
-print(f"\n Your final score is: {score}/{len(question)}")                  
+    print(f"\n Your final score is: {score}/{len(question)}")                  
                                             
                                             
                                            

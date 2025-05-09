@@ -80,6 +80,11 @@ class QuizApp(App):
                 self.show_popup(f"Wrong!!, correct answer is {tanong.correct_answer")  
                 
     def next_question(self, instance):
-            
+        self.questin_index += 1
+        if self.question_index < len(self.question):
+            self.project_question()
+        else:
+            self.show_score()            
         
+         
         

@@ -1,4 +1,5 @@
 import random
+import kivy.app import App
 
 class Question:
     def __init__(self, text_question, choices, correct_answer):

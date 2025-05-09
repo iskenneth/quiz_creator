@@ -70,7 +70,9 @@ class QuizApp(App):
             options = ['a', 'b', 'c', 'd']
             
             for letters, (original_label, choice_text) in enumerate(choice_list): 
-                label_map[options [letters]] = original_label
+                label = options[letters]
+                label_map[label] = original_label
+
                 option_button = Button(text=f"{options[letters]}. {choice_text}", on_press=lambda instance, label=options[letters]: self.check_answer(label))
 
                 self.buttons_layout.add_widget(option_button)
@@ -81,7 +83,7 @@ class QuizApp(App):
                 self.score +=1
                 self.show_popup("Correct!!", "on to the next one")
          else:
-                self.show_popup("Wrong!!",  f"correct answer is {tanong.correct_answer}")  
+                self.show_popup("Wrong!!",  f'"correct answer is {tanong.correct_answer}")  
                 
     def next_question(self, instance):
         self.question_count += 1

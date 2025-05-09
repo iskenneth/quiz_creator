@@ -48,10 +48,10 @@ class QuizApp(App):
         self.question_label = Label( text = "These are the Questions")
         self.layout.add_widget(self.question_label)
         
-        self.buttons_layout = GridLayout(column=1)
+        self.buttons_layout = GridLayout(cols=1)
         self.add_widget(self.buttons_layout)
         
-        self.button_next = Button(text="Proceed_to_next_Question", on_press=self.proceed_to_next_question)
+        self.button_next = Button(text="Proceed_to_next_Question", on_press=self.next_question)
         self.add_widget(self.button_next)
         self.project_question()
         return self.layout
@@ -71,7 +71,7 @@ class QuizApp(App):
             for letters, (original_label, choice_text) in enumerate(choice_list): 
                 label_map[options [letters]] = original_label
                 option_button = Button(text=f"{options[letters]}. {choice_text}",on_press=lambda instances, label=options[letters]: self.check_answer(label))
-                self.add_widget(option_button)
+                self.buttons_layout.add_widget(option_button)
             
     def check_answer(self, selected_label):
          tanong = self.question[self.question_index]
@@ -96,4 +96,6 @@ class QuizApp(App):
         popup = Popup(title=title, content=Label(text=message), size_hint=(None, None), size=(400, 400)) 
         popup.open()        
          
-        
+if __name__ == '__main__':
+    QuizApp().run()
+       

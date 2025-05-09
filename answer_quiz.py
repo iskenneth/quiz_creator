@@ -68,7 +68,19 @@ class QuizApp(App):
             option_button = Button(text=f"{options[letters]}. {choice_text}",on_press=lambda instances, label=options[letters]: self.check_answer(label))
             self.add_widget(option_button)
             
-    def check_answer(self, selected_label):            
+    def check_answer(self, selected_label):
+            tanong = self.question[self.question_index]
+            if selected_label == tanong.correct_answer:
+                self score +=1
+                self.show_popup("Correct!!")
+            else:
+                self.show_popup(f"Wrong!!, correct answer is {tanong.correct_answer")                  
+                                  
+                                  
+                        
+                
+                
+                           
             
             
      

@@ -4,7 +4,7 @@ from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.popup import Popup
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.gridlayput import GridLayout
+from kivy.uix.gridlayout import GridLayout
 
 class Question:
     def __init__(self, text_question, choices, correct_answer):

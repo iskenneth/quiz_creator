@@ -52,6 +52,7 @@ class QuizApp(App):
         self.add_widget(self.buttons_next)
         
     def project_question(self):
-            
+            tanong = self.questions[self.question_index]  
+            self.question_label.text = tanong.text_question
             
      

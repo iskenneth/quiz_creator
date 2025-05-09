@@ -38,3 +38,6 @@ class QuizApp(App):
         self.question_count = 0
         self.score = 0
         self.question = load_question_from_file('quiz_data.txt')
+        
+        self.layout = BoxLayout (orientation = 'vertical')
+        

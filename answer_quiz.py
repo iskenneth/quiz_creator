@@ -72,18 +72,18 @@ class QuizApp(App):
             for letters, (original_label, choice_text) in enumerate(choice_list): 
                 label = options[letters]
                 label_map[label] = original_label
-
-                option_button = Button(text=f"{options[letters]}. {choice_text}", on_press=lambda instance, label=options[letters]: self.check_answer(label))
-
+                if original_label == tanong.correct_answer:
+    self.correct_label = label
+                option_button = Button(text=f"{label}. {choice_text}", on_press=lambda instance, label=label: self.check_answer(label))
                 self.buttons_layout.add_widget(option_button)
             
     def check_answer(self, selected_label):
          tanong = self.questions[self.question_count]
-         if selected_label == tanong.correct_answer:
+         if selected_label == self.correct_label:
                 self.score +=1
                 self.show_popup("Correct!!", "on to the next one")
          else:
-                self.show_popup("Wrong!!",  f'"correct answer is {tanong.correct_answer}")  
+                self.show_popup("Wrong!!",  f"correct answer is {tanong.correct_answer}")  
                 
     def next_question(self, instance):
         self.question_count += 1

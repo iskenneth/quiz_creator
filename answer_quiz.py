@@ -79,7 +79,7 @@ class QuizApp(App):
                 self_score +=1
                 self.show_popup("Correct!!")
          else:
-                self.show_popup(f"Wrong!!, correct answer is {tanong.correct_answer")  
+                self.show_popup(f"Wrong!!, correct answer is {tanong.correct_answer}")  
                 
     def next_question(self, instance):
         self.questin_index += 1

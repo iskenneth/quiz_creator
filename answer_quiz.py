@@ -72,21 +72,14 @@ class QuizApp(App):
             self.add_widget(option_button)
             
     def check_answer(self, selected_label):
-            tanong = self.question[self.question_index]
-            if selected_label == tanong.correct_answer:
+         tanong = self.question[self.question_index]
+         if selected_label == tanong.correct_answer:
                 self score +=1
                 self.show_popup("Correct!!")
-            else:
+         else:
                 self.show_popup(f"Wrong!!, correct answer is {tanong.correct_answer")  
                 
+    def next_question(self, instance):
             
-                                
-                                  
-                                  
-                        
-                
-                
-                           
-            
-            
-     
+        
+        

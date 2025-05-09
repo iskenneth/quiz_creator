@@ -55,4 +55,6 @@ class QuizApp(App):
             tanong = self.questions[self.question_index]  
             self.question_label.text = tanong.text_question
             
+            self.buttons_layout.clear_widgets()
+            
      

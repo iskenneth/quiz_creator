@@ -66,16 +66,19 @@ class QuizApp(App):
             choice_list = list(tanong.choices.items())
             random.shuffle(choice_list)
             
-            label_map = {}
+            self.label_map = {}
             options = ['a', 'b', 'c', 'd']
             
             for letters, (original_label, choice_text) in enumerate(choice_list): 
-                label = options[letters]
-                label_map[label] = original_label
+                display_label = options[letters]
+                self.label_map[display_label] = original_label
                 if original_label == tanong.correct_answer:
-    self.correct_label = label
-                option_button = Button(text=f"{label}. {choice_text}", on_press=lambda instance, label=label: self.check_answer(label))
-                self.buttons_layout.add_widget(option_button)
+                    self.correct_label = label
+                    option_button = Button(
+        text=f"{displayed_label}. {choice_text}",
+        on_press=lambda instance, label=displayed_label: self.check_answer(label)
+    )
+                    self.buttons_layout.add_widget(option_button)
             
     def check_answer(self, selected_label):
          tanong = self.questions[self.question_count]

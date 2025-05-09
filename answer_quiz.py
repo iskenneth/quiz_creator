@@ -40,4 +40,5 @@ class QuizApp(App):
         self.question = load_question_from_file('quiz_data.txt')
         
         self.layout = BoxLayout (orientation = 'vertical')
-        
+        self.question_label = Label( text = "These are the Questions")
+        self.layout.add_widget(self.question_label)

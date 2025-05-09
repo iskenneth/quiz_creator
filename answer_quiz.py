@@ -9,7 +9,7 @@ class Question:
     def is_correct (self, answer):
         return self.correct_answer == answer
         
-def load_question_from_file(quiz_data.txt):
+def load_question_from_file(filename):
         question = []
     with open(quiz_data.txt, 'r') as file:
         lines = file.readlines()

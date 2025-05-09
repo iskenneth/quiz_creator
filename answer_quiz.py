@@ -11,7 +11,7 @@ class Question:
         
 def load_question_from_file(filename):
     question = []
-    with open(quiz_data.txt, 'r') as file:
+    with open('quiz_data.txt', 'r') as file:
         lines = file.readlines()
     for options in range (0, len(lines), 6):
         question_text = lines[options].strip().split(":")[1].strip()
@@ -22,10 +22,10 @@ def load_question_from_file(filename):
         correct_answer = lines[options + 5].strip().split(":")[1].strip()
                
         choices =  {
-            'a' : choices_a,
-            'b' : choices_b,
-            'c' : choices_c,
-            'd' : choices_d
+            'a' : choice_a,
+            'b' : choice_b,
+            'c' : choice_c,
+            'd' : choice_d
         }
         tanong = Question(question_text, choices, correct_answer)
         question.append(tanong)              
@@ -61,7 +61,9 @@ def take_quiz(question):
                 print("Error!!")      
                       
     print(f"\n Your final score is: {score}/{len(question)}")        
-              
+
+questions = load_question_from_file("quiz_data.txt")
+take_quiz(question)                            
                                             
                                             
                                            

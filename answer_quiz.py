@@ -36,3 +36,5 @@ def load_question_from_file(filename):
 class QuizApp(App):
     def build(self):
         self.question_count = 0
+        self.score = 0
+        self.question = load_question_from_file('quiz_data.txt')
